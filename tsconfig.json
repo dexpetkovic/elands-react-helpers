@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "baseUrl": "./",
+    "paths": {
+      "src/*": ["./src/*"],
+      "src/component/*": ["./src/component/*"],
+      "test/*": ["test/*"],
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["dom", "dom.iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "types": ["node"],
+    "outDir": "./dist"
+  },
+  "exclude": ["./dist", "./build"]
+}
