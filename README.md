@@ -61,6 +61,43 @@ The `CircularProgress` component accepts the following props:
 
 - `style`: A style object or array that will be passed to the outermost `View` component. This can be used to apply additional styles or layout properties to the progress circle.
 
+## AnimateComponentCollapsing Component
+
+The `AnimateComponentCollapsing` component is used to animate the collapsing of a component. It uses the `Animated` API from `react-native` to create a smooth transition effect.
+
+### Usage
+
+Here is a basic example of how to use the `AnimateComponentCollapsing` component:
+
+```jsx
+import { AnimateComponentCollapsing } from 'elands-react-helpers';
+
+<AnimateComponentCollapsing
+  isComponentCollapsed={isCollapsed}
+  expandComponentToHeight={200}
+  animationDurationInMs={500}
+>
+  <YourComponent />
+</AnimateComponentCollapsing>
+```
+
+In this example, `YourComponent` will animate the collapsing and expanding based on the `isCollapsed` state.
+
+### Props
+
+The `AnimateComponentCollapsing` component accepts the following props:
+
+- `isComponentCollapsed`: A boolean indicating whether the component is collapsed or not. This prop is required.
+
+- `expandComponentToHeight`: The height to which the component should expand when it is not collapsed. This prop is required.
+
+- `children`: The children components to be rendered inside this component. This prop is required.
+
+- `animationDurationInMs`: The duration of the animation in milliseconds. Defaults to 300ms.
+
+
+Please replace "YourComponent" with the actual component you want to animate and adjust the usage example as necessary.
+
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
