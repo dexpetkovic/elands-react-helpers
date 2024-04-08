@@ -4,8 +4,6 @@
 
 ## Installation
 
-Before using the `elands-react-helpers` library, make sure you have installed and set up React Native in your project. If you haven't, follow the [React Native Getting Started Guide](https://reactnative.dev/docs/getting-started).
-
 To install `elands-react-helpers`, run the following command in your terminal:
 
 ```bash
@@ -97,6 +95,39 @@ The `AnimateComponentCollapsing` component accepts the following props:
 
 
 Please replace "YourComponent" with the actual component you want to animate and adjust the usage example as necessary.
+
+## useCallbackOnTimeout Hook
+
+The `useCallbackOnTimeout` hook is a custom React hook that allows you to execute a callback function after a specified timeout.
+
+### Usage
+
+Here is a basic example of how to use the `useCallbackOnTimeout` hook:
+
+```jsx
+import { useCallbackOnTimeout } from 'elands-react-helpers';
+
+useCallbackOnTimeout({
+  timeoutInMilliseconds: 2000,
+  callback: () => {
+    console.log('This will be logged after 2 seconds');
+  },
+});
+```
+
+In this example, the `console.log` statement will be executed after 2 seconds.
+
+### Parameters
+
+The `useCallbackOnTimeout` hook accepts an object with the following properties:
+
+- `timeoutInMilliseconds`: A number representing the delay before the callback function is executed, in milliseconds. This property is required.
+
+- `callback`: A function that will be executed after the specified timeout. This property is optional. If not provided, the hook will simply set a timeout and do nothing when it expires.
+
+### Cleanup
+
+The `useCallbackOnTimeout` hook automatically clears the timeout when the component unmounts or when the `callback` or `timeoutInMilliseconds` values change. This prevents potential memory leaks and ensures that the callback is not called after the component has unmounted or when the `callback` or `timeoutInMilliseconds` values have changed.
 
 ## Contributing
 

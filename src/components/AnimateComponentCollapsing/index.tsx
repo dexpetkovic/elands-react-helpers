@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { Animated } from 'react-native'
-import CircularProgress from "../CircularProgress";
 
 export const AnimateComponentCollapsing = (props: {
   isComponentCollapsed: boolean
@@ -8,7 +7,12 @@ export const AnimateComponentCollapsing = (props: {
   children: React.ReactNode
   animationDurationInMs?: number
 }): React.ReactElement => {
-  const { isComponentCollapsed,expandComponentToHeight, children, animationDurationInMs = 300 } = props
+  const {
+    isComponentCollapsed,
+    expandComponentToHeight,
+    children,
+    animationDurationInMs = 300,
+  } = props
 
   const componentCollapseValueMapper = isComponentCollapsed ? 0 : 1
 
@@ -30,4 +34,4 @@ export const AnimateComponentCollapsing = (props: {
   return <Animated.View style={{ height: navBarTranslateY }}>{children}</Animated.View>
 }
 
-export default AnimateComponentCollapsing;
+export default AnimateComponentCollapsing

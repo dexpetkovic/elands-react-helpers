@@ -1,0 +1,11 @@
+.husky
+.idea
+node_modules
+gen
+.eslintrc.js
+index.js
+.ondevice
+.storybook
+coverage
+build
+dist
